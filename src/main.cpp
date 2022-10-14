@@ -4,6 +4,9 @@
 #include <glm/glm.hpp>
 #include <glm/vec2.hpp>
 
+#include <stb_image/stb_image.h>
+
+#include <iostream>
 
 const int SCREEN_WIDTH = 800;
 const int SCREEN_HEIGHT = 600;
@@ -33,6 +36,10 @@ const char* fragment_shader_source =
 
 void setup_shader() 
 {
+	stbi_set_flip_vertically_on_load(1);
+	glm::vec2 vec(1, 2);
+	std::cout << vec.x << "/n";
+
 	unsigned int vertex_shader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
 	glCompileShader(vertex_shader);

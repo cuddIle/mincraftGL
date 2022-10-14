@@ -1,7 +1,7 @@
 # Copyright (C) 2018 Tomasz Gałaj
 
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
-project(OpenGLExample)
+project(opengl_exec)
 
 # Add .lib files
 link_directories(${CMAKE_SOURCE_DIR}/lib)
@@ -17,8 +17,8 @@ file(GLOB_RECURSE HEADER_FILES
 	${CMAKE_SOURCE_DIR}/src/*.hpp)
 
 # Configure assets header file
-# configure_file(src/helpers/RootDir.h.in src/helpers/RootDir.h)
-# include_directories(${CMAKE_BINARY_DIR}/src)
+configure_file(src/helpers/RootDir.h.in src/helpers/RootDir.h)
+include_directories(${CMAKE_BINARY_DIR}/src)
 
 # Define the include DIRs
 include_directories(
@@ -37,14 +37,14 @@ link_directories(
 )
 
 # STB_IMAGE
-# add_library(STB_IMAGE "thirdparty/stb_image.cpp")
+add_library(STB_IMAGE "third_party/stb_image.cpp")
 
 # GLAD
-add_library(GLAD "thirdParty/glad.c")
+add_library(GLAD "third_party/glad.c")
 
 # Define the executable
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
-target_link_libraries(${PROJECT_NAME} GLAD glfw assimp)
+target_link_libraries(${PROJECT_NAME} GLAD glfw assimp STB_IMAGE)
 target_compile_options(${CMAKE_PROJECT_NAME} PUBLIC -g)
 

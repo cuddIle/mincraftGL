@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/cuddle/projects/opengl/third_party/glad.c" "CMakeFiles/GLAD.dir/third_party/glad.c.o" "gcc" "CMakeFiles/GLAD.dir/third_party/glad.c.o.d"
+  "/home/cuddle/projects/opengl/third_party/stb_image.cpp" "CMakeFiles/STB_IMAGE.dir/third_party/stb_image.cpp.o" "gcc" "CMakeFiles/STB_IMAGE.dir/third_party/stb_image.cpp.o.d"
   )
 
 # Targets to which this target links.

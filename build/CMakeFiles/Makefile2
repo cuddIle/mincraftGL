@@ -63,8 +63,9 @@ CMAKE_BINARY_DIR = /home/cuddle/projects/opengl/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/STB_IMAGE.dir/all
 all: CMakeFiles/GLAD.dir/all
-all: CMakeFiles/OpenGLExample.dir/all
+all: CMakeFiles/opengl_exec.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,9 +73,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/STB_IMAGE.dir/clean
 clean: CMakeFiles/GLAD.dir/clean
-clean: CMakeFiles/OpenGLExample.dir/clean
+clean: CMakeFiles/opengl_exec.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/STB_IMAGE.dir
+
+# All Build rule for target.
+CMakeFiles/STB_IMAGE.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuddle/projects/opengl/build/CMakeFiles --progress-num=3,4 "Built target STB_IMAGE"
+.PHONY : CMakeFiles/STB_IMAGE.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/STB_IMAGE.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/STB_IMAGE.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 0
+.PHONY : CMakeFiles/STB_IMAGE.dir/rule
+
+# Convenience name for target.
+STB_IMAGE: CMakeFiles/STB_IMAGE.dir/rule
+.PHONY : STB_IMAGE
+
+# clean rule for target.
+CMakeFiles/STB_IMAGE.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/clean
+.PHONY : CMakeFiles/STB_IMAGE.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/GLAD.dir
@@ -103,30 +131,31 @@ CMakeFiles/GLAD.dir/clean:
 .PHONY : CMakeFiles/GLAD.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/OpenGLExample.dir
+# Target rules for target CMakeFiles/opengl_exec.dir
 
 # All Build rule for target.
-CMakeFiles/OpenGLExample.dir/all: CMakeFiles/GLAD.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuddle/projects/opengl/build/CMakeFiles --progress-num=3,4 "Built target OpenGLExample"
-.PHONY : CMakeFiles/OpenGLExample.dir/all
+CMakeFiles/opengl_exec.dir/all: CMakeFiles/STB_IMAGE.dir/all
+CMakeFiles/opengl_exec.dir/all: CMakeFiles/GLAD.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuddle/projects/opengl/build/CMakeFiles --progress-num=5,6 "Built target opengl_exec"
+.PHONY : CMakeFiles/opengl_exec.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/OpenGLExample.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGLExample.dir/all
+CMakeFiles/opengl_exec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/opengl_exec.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 0
-.PHONY : CMakeFiles/OpenGLExample.dir/rule
+.PHONY : CMakeFiles/opengl_exec.dir/rule
 
 # Convenience name for target.
-OpenGLExample: CMakeFiles/OpenGLExample.dir/rule
-.PHONY : OpenGLExample
+opengl_exec: CMakeFiles/opengl_exec.dir/rule
+.PHONY : opengl_exec
 
 # clean rule for target.
-CMakeFiles/OpenGLExample.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/clean
-.PHONY : CMakeFiles/OpenGLExample.dir/clean
+CMakeFiles/opengl_exec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/clean
+.PHONY : CMakeFiles/opengl_exec.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

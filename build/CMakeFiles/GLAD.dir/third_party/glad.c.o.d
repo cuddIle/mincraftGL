@@ -1,5 +1,5 @@
-CMakeFiles/GLAD.dir/thirdParty/glad.c.o: \
- /home/cuddle/projects/opengl/thirdParty/glad.c \
+CMakeFiles/GLAD.dir/third_party/glad.c.o: \
+ /home/cuddle/projects/opengl/third_party/glad.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \

@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=OpenGLExample
+CMAKE_PROJECT_NAME:STATIC=opengl_exec
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -213,13 +213,13 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-OpenGLExample_BINARY_DIR:STATIC=/home/cuddle/projects/opengl/build
+opengl_exec_BINARY_DIR:STATIC=/home/cuddle/projects/opengl/build
 
 //Value Computed by CMake
-OpenGLExample_IS_TOP_LEVEL:STATIC=ON
+opengl_exec_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-OpenGLExample_SOURCE_DIR:STATIC=/home/cuddle/projects/opengl
+opengl_exec_SOURCE_DIR:STATIC=/home/cuddle/projects/opengl
 
 
 ########################

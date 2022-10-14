@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named STB_IMAGE
+
+# Build rule for target.
+STB_IMAGE: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 STB_IMAGE
+.PHONY : STB_IMAGE
+
+# fast build rule for target.
+STB_IMAGE/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/build
+.PHONY : STB_IMAGE/fast
+
+#=============================================================================
 # Target rules for targets named GLAD
 
 # Build rule for target.
@@ -130,24 +143,24 @@ GLAD/fast:
 .PHONY : GLAD/fast
 
 #=============================================================================
-# Target rules for targets named OpenGLExample
+# Target rules for targets named opengl_exec
 
 # Build rule for target.
-OpenGLExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OpenGLExample
-.PHONY : OpenGLExample
+opengl_exec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 opengl_exec
+.PHONY : opengl_exec
 
 # fast build rule for target.
-OpenGLExample/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/build
-.PHONY : OpenGLExample/fast
+opengl_exec/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/build
+.PHONY : opengl_exec/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -155,7 +168,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -163,32 +176,56 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLExample.dir/build.make CMakeFiles/OpenGLExample.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-thirdParty/glad.o: thirdParty/glad.c.o
-.PHONY : thirdParty/glad.o
+third_party/glad.o: third_party/glad.c.o
+.PHONY : third_party/glad.o
 
 # target to build an object file
-thirdParty/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/thirdParty/glad.c.o
-.PHONY : thirdParty/glad.c.o
+third_party/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/third_party/glad.c.o
+.PHONY : third_party/glad.c.o
 
-thirdParty/glad.i: thirdParty/glad.c.i
-.PHONY : thirdParty/glad.i
+third_party/glad.i: third_party/glad.c.i
+.PHONY : third_party/glad.i
 
 # target to preprocess a source file
-thirdParty/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/thirdParty/glad.c.i
-.PHONY : thirdParty/glad.c.i
+third_party/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/third_party/glad.c.i
+.PHONY : third_party/glad.c.i
 
-thirdParty/glad.s: thirdParty/glad.c.s
-.PHONY : thirdParty/glad.s
+third_party/glad.s: third_party/glad.c.s
+.PHONY : third_party/glad.s
 
 # target to generate assembly for a file
-thirdParty/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/thirdParty/glad.c.s
-.PHONY : thirdParty/glad.c.s
+third_party/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/third_party/glad.c.s
+.PHONY : third_party/glad.c.s
+
+third_party/stb_image.o: third_party/stb_image.cpp.o
+.PHONY : third_party/stb_image.o
+
+# target to build an object file
+third_party/stb_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/third_party/stb_image.cpp.o
+.PHONY : third_party/stb_image.cpp.o
+
+third_party/stb_image.i: third_party/stb_image.cpp.i
+.PHONY : third_party/stb_image.i
+
+# target to preprocess a source file
+third_party/stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/third_party/stb_image.cpp.i
+.PHONY : third_party/stb_image.cpp.i
+
+third_party/stb_image.s: third_party/stb_image.cpp.s
+.PHONY : third_party/stb_image.s
+
+# target to generate assembly for a file
+third_party/stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB_IMAGE.dir/build.make CMakeFiles/STB_IMAGE.dir/third_party/stb_image.cpp.s
+.PHONY : third_party/stb_image.cpp.s
 
 # Help Target
 help:
@@ -199,13 +236,17 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GLAD"
-	@echo "... OpenGLExample"
+	@echo "... STB_IMAGE"
+	@echo "... opengl_exec"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... thirdParty/glad.o"
-	@echo "... thirdParty/glad.i"
-	@echo "... thirdParty/glad.s"
+	@echo "... third_party/glad.o"
+	@echo "... third_party/glad.i"
+	@echo "... third_party/glad.s"
+	@echo "... third_party/stb_image.o"
+	@echo "... third_party/stb_image.i"
+	@echo "... third_party/stb_image.s"
 .PHONY : help
 
 
