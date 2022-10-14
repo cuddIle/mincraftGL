@@ -24,7 +24,7 @@ file(GLOB_RECURSE HEADER_FILES
 include_directories(
 	"${CMAKE_SOURCE_DIR}/src"
 	"${CMAKE_SOURCE_DIR}/include"
-	"${CMAKE_SOURCE_DIR}/include/GLFW"
+	"${CMAKE_SOURCE_DIR}/include/glfw"
 	"${CMAKE_SOURCE_DIR}/include/stb_image"
 	"${CMAKE_SOURCE_DIR}/include/glad"
 	"${CMAKE_SOURCE_DIR}/include/glm"
@@ -40,11 +40,11 @@ link_directories(
 # add_library(STB_IMAGE "thirdparty/stb_image.cpp")
 
 # GLAD
-add_library(GLAD "thirdparty/glad.c")
+add_library(GLAD "thirdParty/glad.c")
 
 # Define the executable
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES})
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
 target_link_libraries(${PROJECT_NAME} GLAD glfw assimp)
-target_compile_options(${CMAKE_===PROJECT_NAME})
+target_compile_options(${CMAKE_PROJECT_NAME} PUBLIC -g)
 
