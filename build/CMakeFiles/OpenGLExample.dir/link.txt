@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/OpenGLExample.dir/src/main.cpp.o -o OpenGLExample   -L/home/cuddle/projects/opengl/lib  -L/home/cuddle/projects/opengl/lib/assimp  -L/home/cuddle/projects/opengl/lib/glfw  -Wl,-rpath,/home/cuddle/projects/opengl/lib:/home/cuddle/projects/opengl/lib/assimp:/home/cuddle/projects/opengl/lib/glfw libGLAD.a -lglfw -lassimp 
