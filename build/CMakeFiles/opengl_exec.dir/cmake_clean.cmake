@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/opengl_exec.dir/src/main.cpp.o"
   "CMakeFiles/opengl_exec.dir/src/main.cpp.o.d"
+  "CMakeFiles/opengl_exec.dir/src/utills/FileUtills.cpp.o"
+  "CMakeFiles/opengl_exec.dir/src/utills/FileUtills.cpp.o.d"
   "opengl_exec"
   "opengl_exec.pdb"
 )

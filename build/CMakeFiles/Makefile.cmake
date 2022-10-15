@@ -11,7 +11,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.24.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeSystem.cmake"
-  "/home/cuddle/projects/opengl/src/helpers/RootDir.h.in"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
@@ -118,12 +117,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
-  "src/helpers/RootDir.h"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/run.dir/DependInfo.cmake"
   "CMakeFiles/STB_IMAGE.dir/DependInfo.cmake"
   "CMakeFiles/GLAD.dir/DependInfo.cmake"
   "CMakeFiles/opengl_exec.dir/DependInfo.cmake"

@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named run
+
+# Build rule for target.
+run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
+.PHONY : run
+
+# fast build rule for target.
+run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
+
+#=============================================================================
 # Target rules for targets named STB_IMAGE
 
 # Build rule for target.
@@ -179,6 +192,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/utills/FileUtills.o: src/utills/FileUtills.cpp.o
+.PHONY : src/utills/FileUtills.o
+
+# target to build an object file
+src/utills/FileUtills.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/utills/FileUtills.cpp.o
+.PHONY : src/utills/FileUtills.cpp.o
+
+src/utills/FileUtills.i: src/utills/FileUtills.cpp.i
+.PHONY : src/utills/FileUtills.i
+
+# target to preprocess a source file
+src/utills/FileUtills.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/utills/FileUtills.cpp.i
+.PHONY : src/utills/FileUtills.cpp.i
+
+src/utills/FileUtills.s: src/utills/FileUtills.cpp.s
+.PHONY : src/utills/FileUtills.s
+
+# target to generate assembly for a file
+src/utills/FileUtills.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/src/utills/FileUtills.cpp.s
+.PHONY : src/utills/FileUtills.cpp.s
+
 third_party/glad.o: third_party/glad.c.o
 .PHONY : third_party/glad.o
 
@@ -235,12 +272,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... run"
 	@echo "... GLAD"
 	@echo "... STB_IMAGE"
 	@echo "... opengl_exec"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/utills/FileUtills.o"
+	@echo "... src/utills/FileUtills.i"
+	@echo "... src/utills/FileUtills.s"
 	@echo "... third_party/glad.o"
 	@echo "... third_party/glad.i"
 	@echo "... third_party/glad.s"

@@ -16,13 +16,13 @@ file(GLOB_RECURSE HEADER_FILES
 	${CMAKE_SOURCE_DIR}/src/*.h
 	${CMAKE_SOURCE_DIR}/src/*.hpp)
 
-# Configure assets header file
-configure_file(src/helpers/RootDir.h.in src/helpers/RootDir.h)
-include_directories(${CMAKE_BINARY_DIR}/src)
+# Add resources files
+file(COPY res DESTINATION ${CMAKE_BINARY_DIR})
 
 # Define the include DIRs
 include_directories(
 	"${CMAKE_SOURCE_DIR}/src"
+	"${CMAKE_SOURCE_DIR}/src/utills"
 	"${CMAKE_SOURCE_DIR}/include"
 	"${CMAKE_SOURCE_DIR}/include/glfw"
 	"${CMAKE_SOURCE_DIR}/include/stb_image"
