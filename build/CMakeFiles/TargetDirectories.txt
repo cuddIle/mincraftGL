@@ -1,4 +1,3 @@
-/home/cuddle/projects/opengl/build/CMakeFiles/run.dir
 /home/cuddle/projects/opengl/build/CMakeFiles/STB_IMAGE.dir
 /home/cuddle/projects/opengl/build/CMakeFiles/GLAD.dir
 /home/cuddle/projects/opengl/build/CMakeFiles/opengl_exec.dir

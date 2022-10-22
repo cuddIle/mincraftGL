@@ -73,37 +73,10 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/run.dir/clean
 clean: CMakeFiles/STB_IMAGE.dir/clean
 clean: CMakeFiles/GLAD.dir/clean
 clean: CMakeFiles/opengl_exec.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/run.dir
-
-# All Build rule for target.
-CMakeFiles/run.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuddle/projects/opengl/build/CMakeFiles --progress-num= "Built target run"
-.PHONY : CMakeFiles/run.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cuddle/projects/opengl/build/CMakeFiles 0
-.PHONY : CMakeFiles/run.dir/rule
-
-# Convenience name for target.
-run: CMakeFiles/run.dir/rule
-.PHONY : run
-
-# clean rule for target.
-CMakeFiles/run.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/clean
-.PHONY : CMakeFiles/run.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/STB_IMAGE.dir
@@ -161,8 +134,8 @@ CMakeFiles/GLAD.dir/clean:
 # Target rules for target CMakeFiles/opengl_exec.dir
 
 # All Build rule for target.
-CMakeFiles/opengl_exec.dir/all: CMakeFiles/GLAD.dir/all
 CMakeFiles/opengl_exec.dir/all: CMakeFiles/STB_IMAGE.dir/all
+CMakeFiles/opengl_exec.dir/all: CMakeFiles/GLAD.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/opengl_exec.dir/build.make CMakeFiles/opengl_exec.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cuddle/projects/opengl/build/CMakeFiles --progress-num=5,6,7 "Built target opengl_exec"

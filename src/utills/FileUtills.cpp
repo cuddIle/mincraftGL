@@ -1,23 +1,35 @@
 #include <FileUtills.h>
 
-void FileUtills::writeFile(std::string filePath, std::string content) {
-    std::ofstream file(filePath);
-    file << content;
+void FileUtills::writeFile(std::string filePath, std::string content)
+{
+    std::ofstream myFile;
+
+    myFile.open(filePath);
+    if (!myFile.is_open())
+    {
+        std::cout << "failed to write into: " << filePath << "\n";
+        // TODO: throw an exeption
+        return;
+    }
+
+    myFile << content;
 }
 
-std::string FileUtills::readFile(std::string filePath) {
+std::string FileUtills::readFile(std::string filePath)
+{
 
-    std::ifstream myfile; 
+    std::ifstream myFile;
     std::string content = "";
-    
-    myfile.open(filePath);
 
-    if (!myfile.is_open()) {
-        std::cout << "failed to open file: " << filePath << "\n";
+    myFile.open(filePath);
+
+    if (!myFile.is_open())
+    {
+        std::cout << "failed to read file: " << filePath << "\n";
         // TODO: throw an exeption
         return "";
     }
-        
-    myfile >> content; 
+
+    myFile >> content;
     return content;
 }
